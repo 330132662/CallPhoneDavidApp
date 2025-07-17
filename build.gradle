@@ -1,8 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    apply from: 'maven.gradle'
     repositories {
-        jcenter()
+        addCommonMaven(repositories)
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.4.2'
@@ -15,7 +16,7 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
+        addCommonMaven(repositories)
     }
 }
 
